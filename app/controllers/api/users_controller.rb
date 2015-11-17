@@ -6,7 +6,7 @@ class Api::UsersController < ApiController
 
     return permission_denied_error unless condition_met
     users = User.all
-    render json: users, each_serializer: Userserializer
+    render json: users, each_serializer: UserSerializer
   end
 
   private

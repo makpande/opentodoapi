@@ -4,7 +4,7 @@ class Api::ListsController < ApiController
 
    def show
      @list = List.all
-     render json: @list, each_serializer: ListSerializer
+     render json: @user.lists(@list), each_serializer: ListSerializer
    end
 
    def create

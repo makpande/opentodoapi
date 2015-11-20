@@ -5,7 +5,7 @@ class Api::ItemsController < ApiController
 
   def index
     @items = @list.items
-    render json: @items, each_serializer ItemSerializer
+    render json: @items, each_serializer: ItemSerializer
   end
 
   def create

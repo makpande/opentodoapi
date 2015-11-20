@@ -26,7 +26,8 @@ puts "#{User.count} users created"
 5.times do
   List.create!(
     user: users.sample,
-    name: Faker::Lorem.sentence
+    name: Faker::Lorem.sentence,
+    permissions: Faker::Lorem.characters(10)
   )
 end
 lists = List.all

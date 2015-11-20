@@ -1,15 +1,14 @@
 Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :jason } do
+
     resources :users do
       resources :lists
     end
 
     resources :lists, only: [] do
-      resources :items, only: [:create]
+      resources :items, only: [:index, :create, :update, :destroy]
     end
-
-    resources :items, only: [:destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

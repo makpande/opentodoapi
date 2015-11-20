@@ -25,15 +25,15 @@ puts "#{User.count} users created"
 
 5.times do
   List.create!(
-  users: users.sample,
-  name: Faker::Lorem.sentence
+    user: users.sample,
+    name: Faker::Lorem.sentence
   )
 end
 lists = List.all
 
 25.times do
   Item.create!(
-    lists: lists.sample,
+    list: lists.sample,
     name: Faker::Lorem.sentence,
   )
 end
